@@ -5,12 +5,12 @@
 
 @font-face {
     font-family: "AvantGardeBook";
-    src: url(/Fonts/AvantGarde\ Book.ttf);
+    src: url(Fonts/AvantGardeBook.ttf);
 }
 
 @font-face {
     font-family: "RockBandFont";
-    src: url(/Fonts/ROCKBAND\ FONT\ V2.ttf);
+    src: url(Fonts/ROCKBANDFONTV2.ttf);
 }
 
 html, body {
@@ -19,11 +19,10 @@ html, body {
 }
 
 body {
-    background-image: url("/Images/white-bricks.jpg");
+    background-image: url("Images/white-bricks.jpg");
 }
 
 .main-header {
-/*background-image: url("/Images/header-backdroung.jpg");*/
 background-size: cover;
 padding-bottom: 2.5vw;
 position: relative;
@@ -39,7 +38,7 @@ border-bottom: 5px solid rgba(255,255,0, 0.8);
     padding-left: 2em;
     padding-bottom: 0.75em;
     list-style-type: none;
-    background-image: url(/Images/brick-icon1.png);
+    background-image: url(Images/brick-icon1.png);
     background-repeat: no-repeat;
     background-size: 20px;
 }
@@ -217,7 +216,7 @@ padding-left: 0;
 }
 
 .button-header {
-background-image: url(/Images/yellow-bricks.jpg);
+background-image: url(Images/yellow-bricks.jpg);
 border: 3px solid black;
 font-size: 2.25em;
 padding-left: 0.75em;
@@ -226,15 +225,15 @@ margin: 0.15em;
 }
 
 .button-header:hover {
-    background-image: url(/Images/yellow-bricks-light.png);
+    background-image: url(Images/yellow-bricks-light.png);
 }
 
 #play-button {
-    background-image: url(/Images/red-bricks.jpg);
+    background-image: url(Images/red-bricks.jpg);
 }
 
 #play-button:hover {
-    background-image: url(/Images/red-bricks-light.png);
+    background-image: url(Images/red-bricks-light.png);
 }
 
 .container-header {
