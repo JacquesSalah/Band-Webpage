@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO Rock Band | Store</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <header class="main-header image-header">
+        <img src="/Images/Rocband_wallpaper3.png" alt="" id="about-image">
+        <nav class="navbar nav">
+            <ul>
+                <li><a href="index.html" id="a1" class="top-a">HOME</a></li>
+                <li><a href="store.html" id="a2" class="top-a">STORE</a></li>
+                <li><a href="about.html" id="a3" class="top-a">ABOUT</a></li>
+            </ul>
+        </nav>
+        <h1 class="band-name band-name-large">LEGO ROCK BAND</h1>
+    </header>
+    <section class="content-section container">
+        <h2 class="section-header"><span class="header-text">MUSIC</span></h2>
+        <div class="shop-items">
+            <div class="shop-item">
+                <span class="shop-item-title">Abbey Road</span>
+                <img class="shop-item-image" src="Images/album_abbey_road.jpg" alt="">
+                <div class="shop-item-details"> <span class="shop-item-price">$9.99</span> <button class="button shop-item-button" type="button">ADD TO CART</button></div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Nevermind</span>
+                <img class="shop-item-image" src="Images/album_nevermind.jpg" alt="">
+                <div class="shop-item-details"> <span class="shop-item-price">$14.99</span> <button class="button shop-item-button" type="button">ADD TO CART</button></div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Currents</span>
+                <img class="shop-item-image" src="Images/album_currents.jpg" alt="">
+                <div class="shop-item-details"> <span class="shop-item-price">$9.99</span> <button class="button shop-item-button" type="button">ADD TO CART</button></div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Plastic Beach</span>
+                <img class="shop-item-image"src="Images/album_plastic_beach.jpg" alt="">
+                <div class="shop-item-details"> <span class="shop-item-price">$19.99</span> <button class="button shop-item-button" type="button">ADD TO CART</button></div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section container">
+        <h2 class="section-header"><span class="header-text">MERCH</span></h2>
+        <div class="shop-items">
+            <div class="shop-item">
+                <span class="shop-item-title">Official Shirt</span>
+                <img class="shop-item-image" src="Images/shirt_1.png" alt="">
+                <div class="shop-item-details"> <span class="shop-item-price">$19.99</span> <button class="button shop-item-button" type="button">ADD TO CART</button></div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Official Shirt (Red)</span>
+                <img class="shop-item-image" src="Images/shirt_2.png" alt="">
+                <div class="shop-item-details"> <span class="shop-item-price">$19.99</span> <button class="button shop-item-button" type="button">ADD TO CART</button></div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Official Mug</span>
+                <img class="shop-item-image" src="Images/coffee_cup.jpg" alt="">
+                <div class="shop-item-details"> <span class="shop-item-price">$9.99</span> <button class="button shop-item-button" type="button">ADD TO CART</button></div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Custom Guitar</span>
+                <img class="shop-item-image" src="Images/guitar.png" alt="">
+                <div class="shop-item-details"> <span class="shop-item-price">$99.99</span> <button class="button shop-item-button" type="button">ADD TO CART</button></div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section container">
+        <h2 class="section-header"><span class="header-text">CART</span></h2>
+        
+    <div class="cart-wrapper">
+
+        <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+
+        <div class="cart-items">   
+            <div class="cart-row">
+                <div class="cart-item cart-column">
+                    <div class="item-data-wrapper">
+                    <img class="cart-item-image" src="Images/shirt_1.png" alt="">
+                    <span class="cart-item-title">Official Shirt</span>
+                    </div>
+                </div>
+                
+                <span class="cart-price cart-column">$19.99</span>
+                
+                <div class="cart-quantity cart-column  cart-buttoms-wrapper">
+                    <div class="item-data-wrapper quantity-wrapper">
+                    <input type="number" name="" id="" class="cart-quantity-input" placeholder="0" max="99" min="0">
+                    <button role="button" class="button button-danger">REMOVE</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-row">
+                <div class="cart-item cart-column">
+                    <div class="item-data-wrapper">
+                    <img class="cart-item-image" src="Images/shirt_2.png" alt="">
+                    <span class="cart-item-title">Official Shirt(red)</span>
+                    </div>
+                </div>
+                
+                <span class="cart-price cart-column">$19.99</span>
+
+                <div class="cart-quantity cart-column cart-buttoms-wrapper">
+                    <div class="item-data-wrapper quantity-wrapper">
+                    <input type="number" name="" id="" class="cart-quantity-input" placeholder="0" max="99" min="0">
+                    <button role="button" class="button button-danger">REMOVE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart-total">
+            <span class="cart-total-title">TOTAL</span>
+            <span class="cart-total-price">$39.98</span>
+        </div>
+        
+    </div>
+        
+        <div class="purchase-button-wrapper">
+            <button role="button" class="button button-primary button-purchase">PURCHASE</button>
+        </div>        
+
+    </section>
+    <footer class="main-footer">
+        <div class="containter main-footer-container">
+        <h3 class="band-name band-name-footer">LEGO ROCK BAND</h3>
+        <div class="nav footer-nav">
+            <a href="https://www.ttgames.com/" target="_blank" class="bottom-a"><img src="Images/TT_Games.png" alt=""></a>
+            <a href="https://www.lego.com/" target="_blank" class="bottom-a"><img src="Images/LEGO_logo.svg.png" alt=""></a>
+            <a href="https://warnerbrosgames.com/" target="_blank" class="bottom-a"><img src="Images/warner.png" alt=""></a>
+            <a href="http://www.harmonixmusic.com/" target="_blank" class="bottom-a harmonix-a"><img src="Images/Harmonix-logo.webp" alt=""></a>
+        </ul>
+        </div>
+    </footer>
+</body>
+</html>
