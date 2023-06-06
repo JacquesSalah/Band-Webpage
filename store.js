@@ -6,17 +6,15 @@ if (document.readyState == "loading") {
 
 function ready() {
     let removeCartItemButtons = document.getElementsByClassName("button-danger")
-
     for (let i = 0; i < removeCartItemButtons.length; i++) {
         let removeButton = removeCartItemButtons[i]
         removeButton.addEventListener("click", removeCartItem )
     }
 
     let quantityInputs = document.getElementsByClassName("cart-quantity-input")
-
     for (let i = 0; i < quantityInputs.length; i++) {
         let quantityInput = quantityInputs[i]
-        quantityInput.addEventListener("change", updateCartTotal )
+        quantityInput.addEventListener("change", quantityChanged )
     }
 
     let addToCartButtons = document.getElementsByClassName("shop-item-button")
@@ -26,6 +24,14 @@ function ready() {
     }
 
     document.getElementsByClassName("button-purchase")[0].addEventListener("click", purchaseClicked)
+}
+
+function quantityChanged(event) {
+    let input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    updateCartTotal()
 }
 
 function purchaseClicked () {
@@ -71,7 +77,7 @@ function addItemToCart(title, price, imageSrc) {
                 
                 <div class="cart-quantity cart-column  cart-buttoms-wrapper">
                     <div class="item-data-wrapper quantity-wrapper">
-                    <input type="number" name="" id="" class="cart-quantity-input" placeholder="0" max="99" min="0">
+                    <input type="number" name="" id="" class="cart-quantity-input" value = "1" max="99" min="0">
                     <button role="button" class="button button-danger">REMOVE</button>
                     </div>
                 </div>
@@ -79,7 +85,7 @@ function addItemToCart(title, price, imageSrc) {
     newRow.innerHTML = newRowContents
     cartItems.append(newRow)
     newRow.getElementsByClassName("button-danger")[0].addEventListener("click", removeCartItem)
-    newRow.getElementsByClassName("cart-quantity-input")[0].addEventListener("change", updateCartTotal )
+    newRow.getElementsByClassName("cart-quantity-input")[0].addEventListener("change", quantityChanged )
 }
 
 function removeCartItem (event) {
@@ -87,12 +93,6 @@ function removeCartItem (event) {
     buttonClicked.parentElement.parentElement.parentElement.remove()
     updateCartTotal()
 }
-
-/* Could have used this as event listener for changing quantity. It is easier to just call the update function since I already took care of the input type a minimun value
-function quantityChanged(event) {
-    let quantityAltered = event.target
-    updateCartTotal()    
-}*/
 
 
 function updateCartTotal() {
