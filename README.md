@@ -1,2 +1,2 @@
 # Band-Webpage
-A website for a band thar also serves as a promotional page
+A website for a band inspired by the Lego Rock Band videogame
