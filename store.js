@@ -41,8 +41,8 @@ function purchaseClicked () {
         cartItems.removeChild(cartItems.firstChild)
     }
     let cartalert = document.getElementsByClassName("alert-wrapper")
-    while (cartalert[0]) {
-        cartalert[0].parentElement.removeChild(cartalert[0])
+    for (let i = 0; i < cartalert.length; i++) {
+        cartalert[i].style.display = "none"
     }
     updateCartTotal()
 }
