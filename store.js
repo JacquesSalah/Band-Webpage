@@ -40,16 +40,19 @@ function purchaseClicked () {
     while ( cartItems.hasChildNodes() ) {
         cartItems.removeChild(cartItems.firstChild)
     }
+    let cartalert = document.getElementsByClassName("alert-wrapper")
+    while (cartalert[0]) {
+        cartalert[0].parentElement.removeChild(cartalert[0])
+    }
     updateCartTotal()
 }
 
 function addToCartClick(event) {
     let button = event.target
-    let container = button.parentElement.parentElement
+    let container = button.parentElement.parentElement.parentElement
     let title = container.getElementsByClassName("shop-item-title")[0].innerText
     let price = container.getElementsByClassName("shop-item-price")[0].innerText
     let imageSrc = container.getElementsByClassName("shop-item-image")[0].src
-    console.log(title, price, imageSrc)
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }
@@ -61,7 +64,9 @@ function addItemToCart(title, price, imageSrc) {
     let cartItemTitles = cartItems.getElementsByClassName("cart-item-title")
     for (let i = 0; i < cartItemTitles.length; i++) {
         if (cartItemTitles[i].innerText == title) {
-            alert("This item is already in your cart")
+            let cartalert = event.target.parentElement.parentElement.parentElement.getElementsByClassName("alert-wrapper")[0]
+            cartalert.style.display = "flex"
+            /*alert("This item is already in your cart")*/
             return
         }
     }
